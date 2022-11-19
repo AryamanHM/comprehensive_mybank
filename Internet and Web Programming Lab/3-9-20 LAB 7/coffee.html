@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Marketing Foundation</title>
+	<script>
+		var x=prompt("Enter number of bags of normal coffee.");
+		var y=prompt("Enter number of bags of decaffeinated coffee.");
+		var z=prompt("Enter number of bags of moha coffee.");
+		var m=prompt("Do you want to become a member of 'The Marketing Foundation?'");
+		var money=prompt("Enter money received from customer.");
+		var a=9*x;
+		var b=y*8;
+		var c=z*11;
+		var total=a+b+c;
+		var total1=0,total2=0;
+		var change;
+		if(total>100)
+			{
+				total=total-15;
+			}
+		if(m=="yes")
+			{
+				total1=total+50;
+				total2=(0.20)*total;
+			}
+		
+		document.write("Summary:You purchased " + x +" bags of regular, totaling " + a +" dollars. You purchased "+y+" bags of decaf, totaling "+ b + " dollars. You purchased "+ z + " bags of mocha, totaling "+c+ " dollars. Your total purchase cost is "+ total + " dollars.");
+		document.write("<br />");
+		document.write("Bags of Regular Coffee:"+x);
+		document.write("<br />");
+		document.write("Price of Regular Coffee:"+a);
+		document.write("<br />");
+		document.write("Bags of Decaf Coffee:"+y);
+		document.write("<br />");
+		document.write("Price of Decaf Coffee:"+b);
+		document.write("<br />");
+		document.write("Bags of Mocha Coffee:"+z);
+		document.write("<br />");
+		document.write("Price of Mocha Coffee:"+c);
+		document.write("<br />");
+		document.write("Total Price of Coffee:"+total);
+		document.write("<br />");
+		document.write("Membership Fee:"+total2);
+		document.write("<br />");
+		document.write("Revised Price:"+total1);
+		document.write("<br />");
+		if(money>=total1)
+			{
+				change=money-total1;
+				document.write("Change Received:"+change);
+				document.write("<br />");
+				document.write("Thanks for Shopping at SunBucks!!!");
+				document.write("<br />");
+			}
+		else
+			{
+				document.write("Insufficient Money");
+			}
+		
+		
+	</script>
+</head>
+
+<body>	
+	
+</body>
+</html>

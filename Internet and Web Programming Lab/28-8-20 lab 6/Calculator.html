@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8" />
+<title>JavaScript program to calculate arithmetic operations </title>
+<style type="text/css">
+body {margin: 30px;}
+	td, th {border:  1px solid;
+      padding: 10px;
+      min-width: 200px;
+      background: white;
+      box-sizing: border-box;
+      text-align: left;
+}
+	table {border-collapse: collapse; font-family: helvetica}
+	tbody {
+  overflow: scroll;
+  height: 200px;
+}
+</style> 
+</head>
+<body>
+<form>
+	<table width="200" border="1">
+	  <tbody>
+	    <tr>
+	      <th scope="col">1st Number :</th>
+	      <th scope="col"><input type="text" id="firstNumber" /></th>
+	      <th scope="col"><input type="button" onClick="calculate()" Value="Calculate" /></th>
+        </tr>
+	    <tr>
+	      <th scope="row">2nd Number:</th>
+	      <td><input type="text" id="secondNumber" /></td>
+	      <td><input type="reset" value="Reset"></td>
+        </tr>
+	    <tr>
+	      <th scope="row">Addition: </th>
+	      <td><span id = "result1"></span></td>
+	      <td>&nbsp;</td>
+        </tr>
+	    <tr>
+	      <th scope="row">Subtraction:</th>
+	      <td><span id = "result2"></span></td>
+	      <td>&nbsp;</td>
+        </tr>
+	    <tr>
+	      <th scope="row">Multiplication:</th>
+	      <td><span id = "result3"></span></td>
+	      <td>&nbsp;</td>
+        </tr>
+	    <tr>
+	      <th scope="row">Division:</th>
+	      <td><span id = "result4"></span></td>
+	      <td>&nbsp;</td>
+        </tr>
+      </tbody>
+</table>
+	</form>
+	<script>
+	function calculate()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+	num1=Number(num1);
+	num2=Number(num2);
+        document.getElementById("result1").innerHTML = num1 + num2;
+	document.getElementById("result2").innerHTML = num1 - num2;
+	document.getElementById("result3").innerHTML = num1 * num2;
+	document.getElementById("result4").innerHTML = num1 / num2;
+}
+
+	</script>
+</body>
+</html>

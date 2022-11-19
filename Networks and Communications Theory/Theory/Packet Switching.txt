@@ -1,0 +1,4 @@
+In Packet switch Data are transmitted in discrete units of potentially variable length blocks called packets.
+It supports for all kinds of data unlike circuit switching  ( = __ = )
+
+Each packet contains data, header with control info. (Source address and Destination address)

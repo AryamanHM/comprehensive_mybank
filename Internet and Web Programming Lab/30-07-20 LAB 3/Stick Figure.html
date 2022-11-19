@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="450" height="450" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+	<script>
+		var canvas = document.getElementById("myCanvas");
+	    context = canvas.getContext("2d");
+	    context.beginPath();
+        context.fillStyle="lightblue"; // #ffe4c4
+        context.arc(200, 50, 50, 0, Math.PI * 2, true);
+		context.stroke();
+		//draw circle for head
+// (x,y) center, radius, start angle, end angle, anticlockwise
+        context.fill();
+        context.beginPath();
+		// body
+        context.beginPath();
+        context.moveTo(200, 100);
+        context.lineTo(200, 180);
+        context.strokeStyle = "black";
+        context.stroke();
+		// arms
+        context.beginPath();
+        context.strokeStyle = "black"; 
+        context.moveTo(200, 100);
+        context.lineTo(150, 130);
+        context.moveTo(200, 100);
+        context.lineTo(250, 130);
+        context.stroke();
+		// legs
+        context.beginPath();
+        context.strokeStyle = "black";
+        context.moveTo(200, 180);
+        context.lineTo(150, 280);
+        context.moveTo(200, 180);
+        context.lineTo(250, 280);
+        context.stroke();
+	</script>
+</body>
+</html>

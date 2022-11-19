@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Find Largest name</title>
+</head>
+
+<body>
+	<script>
+	var arr=[];
+		var len_max,large_name;
+		var x=prompt("Enter number of names of policy holders.");
+		for(var i=0;i<x;i++)
+			{
+				arr.push(prompt("Enter name:"));
+			}
+		len_max=arr[0].length;
+		for(var i=0;i<x;i++)
+			{
+				if(arr[i].length >= len_max)
+					{
+						large_name=arr[i];
+					}
+			}
+		document.write("Longest Name:")
+ document.write(large_name);
+ 
+	</script>
+	
+</body>
+</html>

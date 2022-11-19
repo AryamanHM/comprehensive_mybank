@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Newspaper</title>
+    <style>
+        table{
+            border:2px dashed yellow;
+        }
+        th,td{
+            border: 1px dotted red;
+        }
+		button{
+    cursor: pointer;
+    background: #44c4e7;
+    border: 0;
+    color: #fff;
+    font-family: "Calibri";
+}
+
+    button:hover {
+        background: #369cb8;
+    }
+		
+		p
+		{
+			color: darkred;
+		}
+		h2
+		{
+			color: brown;
+		}
+    </style>
+    <script>
+        function Create() {
+            var h = document.getElementById("heading1").value;
+            var c = document.getElementById("content1").value;
+            var a = document.getElementById("author1").value;
+            var d = new Date();
+
+
+            var x = document.createElement("ARTICLE");
+            x.setAttribute("id", "myArticle");
+            document.body.appendChild(x);
+
+            var heading = document.createElement("h1");
+            var txt1 = document.createTextNode(h);
+            heading.appendChild(txt1);
+            document.getElementById("myArticle").appendChild(heading);
+
+            var content = document.createElement("p");
+            var txt2 = document.createTextNode(c);
+            content.appendChild(txt2);
+            document.getElementById("myArticle").appendChild(content);
+
+            var author = document.createElement("h2");
+            var txt3 = document.createTextNode(a);
+            author.appendChild(txt3);
+            document.getElementById("myArticle").appendChild(author);
+
+            var date=document.createElement("p");
+			 var txt4 = document.createTextNode(d);
+			date.appendChild(txt4);
+			document.getElementById("myArticle").appendChild(date);
+
+            
+
+        }
+    </script>
+</head>
+<body background="white-paper-wrinkled-texture-background-white-paper-wrinkled-texture-background-white-crumpled-paper-texture-background-137375365.jpg">
+    <h1 align="center" style="color: black">E-Newspaper</h1>
+   
+        <table align="center">
+            <tr>
+                <th style="color:black;">Heading:</th>
+                <td><input type="text" id="heading1" /></td>
+            </tr>
+            <tr>
+                <th style="color:white;">Content:</th>
+                <td><textarea cols="10" rows="5" id="content1" placeholder="Enter paragraph here"></textarea></td>
+            </tr>
+            <tr>
+                <th style="color:white;">Author:</th>
+                <td><input type="text" id="author1" /></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" align="center"><button onclick="Create()">Submit your article</button></td>
+            </tr>
+        </table> 
+		
+        <p id="ad" align="left" > <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXP72_VW_34FR+watch-44-alum-gold-nc-5s_VW_34FR_WF_CO?wid=750&hei=712&trim=1,0&fmt=p-jpg&qlt=80&op_usm=0.5,0.5&.v=1589938213000,1569365645172" style="height: 200px;width: 200px;"></p>
+<h4>Get your new Apple WATCH TODAY!!!</h4>
+	<p id="ad" align="center"><img src="Fall Semester 2020-21/Internet and Web Programming Theory/IWP CLASS wORKS(tHEORY)/3-8-20/cj.jpg" style="height: 200px;width: 200px;" ></p>
+		<h4  align="center">New book from the Demo-God Out Now!!!</h4>
+	<p id="ad" align="right"><img src="Fall Semester 2020-21/Internet and Web Programming Theory/IWP CLASS wORKS(tHEORY)/3-8-20/ak.jpg" style="height: 200px;width: 200px;"></p>
+	<h4 align="right">Arkham Tank Simulator(aka GTA Arkham)OUT NOW ON XBOX,PS4 and not-Steam.</h4>
+</body>
+</html>

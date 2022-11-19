@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendar</title>
+    <script> 
+        var  monthdays = {
+                        "jan" : 31,
+                        "feb" : 28,
+                        "mar" : 31,
+                        "apr" : 30,
+                        "may" : 31,
+                        "jun" : 30,
+                        "jul" : 31,
+                        "aug" : 31,
+                        "sep" : 30,
+                        "oct" : 31,
+                        "nov" : 30,
+                        "dec" : 31
+                    };
+        var y = 2001;
+        var month = "jan";
+        function dropdown()
+        {
+            for(i = 1;i<=31;i++)
+            {
+                document.getElementById('date').innerHTML += `<option value="${i}" class="date">${i}</option>`;
+            }
+        }
+        
+        function monthchoose()
+        {   
+            var yearvalue = document.getElementById('year');
+            var y = yearvalue.options[yearvalue.selectedIndex].value;
+            if((y%400==0 || y%4==0 && y%100!=0))
+            {
+                monthdays = {
+                    "jan" : 31,
+                    "feb" : 29,
+                    "mar" : 31,
+                    "apr" : 30,
+                    "may" : 31,
+                    "jun" : 30,
+                    "jul" : 31,
+                    "aug" : 31,
+                    "sep" : 30,
+                    "oct" : 31,
+                    "nov" : 30,
+                    "dec" : 31
+                };
+            }
+            else{
+                 monthdays = {
+                    "jan" : 31,
+                    "feb" : 28,
+                    "mar" : 31,
+                    "apr" : 30,
+                    "may" : 31,
+                    "jun" : 30,
+                    "jul" : 31,
+                    "aug" : 31,
+                    "sep" : 30,
+                    "oct" : 31,
+                    "nov" : 30,
+                    "dec" : 31
+                };
+            }
+        }
+
+        function changedate()
+        {   
+            document.querySelectorAll('.date').forEach(function(a)
+            {a.remove()})
+            var i;
+            var monthvalue = document.getElementById('month');
+            var month = monthvalue.options[monthvalue.selectedIndex].value;
+            for(i = 1;i<=listmonth[month];i++)
+            {
+                document.getElementById('date').innerHTML += `<option value="${i}" class="date">${i}</option>`;
+            } 
+        }
+       
+
+    </script>
+
+    <style>
+        .background{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(18,27,59);
+			}
+        .forms{
+            padding:3%;
+            padding-top:1%;
+            border: 8px solid white;
+            text-align:center;
+            width:30%;
+        }
+        h2{
+            color: white;
+            font-size: 30px;
+            font-weight:bolder;
+        }
+        select{
+            width:30%;
+            padding:1%;
+            font-size:20px;
+        }
+        .inputlabels
+        {
+            display:inline-block;
+            width:25%;
+            padding:2%;
+            color: red;
+            font-size:30px;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+<body class="background" onload="dropdown()">
+    <form action="">
+        <div class="forms">
+            <h2>calendar for date selection</h2>
+            <center>
+                <label class="inputlabels" for="year">Year</label>
+                <label class="inputlabels" for="month">Month</label>
+                <label class="inputlabels" for="date">Date</label>
+            </center>
+            <select name="year" id="year" onchange="monthchoose();changedate()">
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+            </select>
+            <select name="month" id="month" onchange="changedate()">
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>   
+            </select>
+            <select name="date" id="date">
+               
+            </select>
+        </div>
+    </form>
+</body>
+</html>

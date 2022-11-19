@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script>
+	
+	function loadmenu(x)
+		{
+			if(x=='1')
+				{
+					document.getElementById('menu1').style.visibility="visible";
+				}
+			if(x=='2')
+				{
+					document.getElementById('menu2').style.visibility="visible";
+				}
+			if(x=='3')
+				{
+					document.getElementById('menu3').style.visibility="visible";
+				}
+		}
+		function disablemenu(x)
+		{
+			if(x=='1')
+				{
+					document.getElementById('menu1').style.visibility="hidden";
+					//document.getElementById('menu2').style.visibility="hidden";
+				}
+			if(x=='2')
+				{
+					document.getElementById('menu2').style.visibility="hidden";
+					//document.getElementById('menu2').style.visibility="hidden";
+				}
+			if(x=='3')
+				{
+					document.getElementById('menu3').style.visibility="hidden";
+					//document.getElementById('menu2').style.visibility="hidden";
+				}
+		}
+		function displayCart()
+		{
+			document.getElementById('mycart').style.visibility="visible";
+		}
+		function addToCart()
+		{
+			alert("Product added Succesfully");
+			document.getElementById('mycart').innerHTML="My Item-1<br>";
+		}
+	</script>
+</head>
+
+<body>
+	<br><br><br>
+	<table align="center" width="80%" border="0">
+		<tr>
+			<td align="right" onclick="displayCart()" >
+				My Cart
+			</td></tr><tr>
+		<td>
+		<div class="my-cart" id="mycart" style="visibility: hidden">
+			My Items
+			</div>
+		</td></tr> 
+	<table align="center" width="80%" class="text1">
+		<!---------Main Menu------------->
+	<tr>
+		<td onmouseenter="loadmenu('1');" onmouseleave="disablemenu('1');">Laptop</td>
+		<td onmouseenter="loadmenu('2');" onmouseleave="disablemenu('2');">Mobiles</td>
+		<td><a href="">Televisions</a></td>
+		<td>Men's</td>
+		<td>Women's</td>
+		<td>Home-Furniture</td>
+		</tr>
+	<!---------Sub Menu------------->
+	<tr>
+	<td>
+		<div class="menu1" id="menu1" style="visibility: hidden">
+		Dell<br>HP<br>Lenovo
+		</div>
+		</td>
+		<td>
+		<div class="menu2" id="menu2" style="visibility: hidden">
+		Dell<br>HP<br>Lenovo
+		</div>
+		</td>
+		<td>
+		<div class="menu3" id="menu3" style="visibility: hidden">
+		Onida<br>Sony<br>
+		</div>
+		</td>
+	</tr>
+	</table>
+	</table>
+	<button onClick="addToCart()" value="Add To Cart">Add to Cart</button>
+</body>
+</html>

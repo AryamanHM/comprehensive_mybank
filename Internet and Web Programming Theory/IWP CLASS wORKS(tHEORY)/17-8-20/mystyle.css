@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1
+		{
+			font-family: Arial;
+			color: red;
+			font-size: 50+;
+			font-weight: bold;
+			text-decoration: underline;
+			font-style: italic;
+		}
+	h2
+		{
+			font-family: Arial;
+			color: blue;
+			font-size: 30px;
+			font-weight: bold;
+			text-decoration: none;
+			font-style: none;
+		}
+		.text1
+		{
+			font-family:Georgia;
+			color: #FF88aa;
+			font-size: 50px;
+			font-weight: bold;
+			text-decoration: none;
+			font-style: none;
+		}
+.outertab
+{
+	border-style: solid;
+	border-color: #292929;
+	rules:none;
+	frame:box;
+	border-width: 2.0pt;
+	border:1px solid #d5d5d5;
+	font-family: Arial;
+	font-size:12px;
+	table-layout:fixed;
+	border-color:#d5e5e5;
+	background-color: #ffffff;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 12px 12px #e5e5e5;
+	word-wrap: break-word;
+}
+.innertab
+{
+	border:1px solid #d5d5d5;
+	font-family: Georgia;
+	font-size:12px;
+	table-layout: fixed;
+	border-color:#d5d5d5;
+	background-color: #c5c5c5;
+	padding-left: 10px;
+	padding-top: 100px;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 12px 1px #e5e5e5;
+	word-wrap: break-word;
+}

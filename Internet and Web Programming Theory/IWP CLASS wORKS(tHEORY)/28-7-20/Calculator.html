@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+	<script>
+	function getValue(n)
+	{
+	//alert(n);
+		document.getElementById("result").value+=n;
+	}
+		//function that evsluates the digit and return result
+		function solve()
+		{
+			let x=document.getElementById("result").value
+			let y=eval(x)
+			document.getElementById("result").value=y
+		}
+	</script>
+</head>
+
+<body bgcolor="#98ae88">
+	<center><h1>Calculator</h1></center>
+	<input type="number" name="op1" id="op1"/>
+	<input type="text" name="operand" id="operand" maxlength="1"/>
+	<input type="number" name="op2" id="op2"/>
+	<table align="center">
+	<tr>
+		<td colspan="3"><input type="text" name="result" id="result" style="text-align: right"></td></tr>
+		<tr><td><input type="button" value="1" style="width:50px;height:50px;" onClick="javascript:getValue('1')"/></td>
+		<td><input type="button" value="2" style="width:50px;height:50px;" onClick="javascript:getValue('2')"/></td>
+		<td><input type="button" value="3" style="width:50px;height:50px;" onClick="javascript:getValue('3')"/></td></tr>
+	<tr>
+		<td><input type="button" value="4" style="width:50px;height:50px;" onClick="javascript:getValue('4')"/></td>
+	<td><input type="button" value="5" style="width:50px;height:50px;" onClick="javascript:getValue('5')"/></td>
+	<td><input type="button" value="6" style="width:50px;height:50px;" onClick="javascript:getValue('6')"/></td></tr>
+	<tr>
+	<td><input type="button" value="7" style="width:50px;height:50px;" onClick="javascript:getValue('7')"/></td>
+	<td><input type="button" value="8" style="width:50px;height:50px;" onClick="javascript:getValue('8')"/></td>
+	<td><input type="button" value="9" style="width:50px;height:50px;" onClick="javascript:getValue('9')"/></td></tr>
+	<tr>
+	<td><input type="button" value="0" style="width:50px;height:50px;" onClick="javascript:getValue('0')"/></td>
+	<td><input type="button" value="+" style="width:50px;height:50px;" onClick="javascript:getValue('+')"/></td>
+	<td><input type="button" value="-" style="width:50px;height:50px;" onClick="javascript:getValue('-')"/></td></tr>
+	<tr>
+	<td><input type="button" value="*" style="width:50px;height:50px;" onClick="javascript:getValue('*')"/></td>
+	<td><input type="button" value="/" style="width:50px;height:50px;" onClick="javascript:getValue('/')"/></td>
+	<td><input type="button" value="=" style="width:50px;height:50px;" onClick="javascript:solve()"/></td></tr></table>
+</body>
+</html>
+

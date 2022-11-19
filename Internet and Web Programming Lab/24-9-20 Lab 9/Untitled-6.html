@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EPF</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function calc(){
+			var sal=parseInt(document.getElementById("sal").value);
+			var a=parseInt(document.getElementById("age").value);
+			var o1=document.getElementById("o1");
+			var o2=document.getElementById("o2");
+			var pf=0,pe=0,per=0;
+			if(sal<=20000){
+				pf=0.1;
+				pe=0.4;
+				per=0.6;
+			}
+			else if(sal>20000 && sal<=60000){
+				pf=0.08;
+				pe=0.6;
+				per=0.4;
+			}
+			else if(sal>60000){
+				pf=0.05;
+				pe=0.6;
+				per=0.4;
+			}
+			if(a>=60)
+				pf+=0.2;
+
+			var pfval=pf*sal;
+			var emp=pe*pfval;
+			var empr=per*pfval;
+			o1.innerHTML=emp;
+			o2.innerHTML=empr;
+		}
+	</script><label style="margin-left: 500px;">Salary: </label><input type="text" id="sal" value="" style="margin-top: 200px;margin-left: 70px;"><br>
+		<label style="margin-left: 500px;">Age: </label><input type="text" id="age" value="" style="margin-top: 40px;margin-left: 85px;"><br><br>
+		<label style="margin-left: 500px;">Contribution of employee: Rs </label><label id="o1"></label><br><br>
+		<label style="margin-left: 500px;">Contribution of employer: Rs </label><label id="o2"></label><br><br>
+		<button onclick="calc()"/>Submit</button>
+
+
+	<style type="text/css">
+		
+		body{
+			background-color: #fdd;
+		}
+		input[type="text"]{
+			width: 200px;
+			height: 30px;
+		}
+		button{
+			 cursor: pointer;
+			    background: #44c4e7;
+			    width: 15%;
+			    padding: 10px 15px;
+			    border: 0;
+			    color: #fff;
+			    font-family: "Calibri";
+			    font-size: 20px;
+			    font-weight: 400;
+			    padding: 10px 10px;
+			    margin-left: 550px;
+		}
+		 button:hover {
+        background: #369cb8;
+    }
+	</style>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+<style>
+.x {
+  background-color: lightgrey;
+  border: 10px solid green;
+}
+.y {
+  background-color: lightyellow;
+  border: 5px solid black;
+}
+.z {
+  background-color: lightpink;
+  border: 5px solid red;
+}
+.tele {
+  background-color: yellow;
+  border: 5px solid red;
+}
+</style>
+<a href="http://t.me/CHEGGHAC"><div class=tele><center><h3>CLICK HERE TO GET MORE FREE SOLUTIONS</h3></center></div></a>
+<div class="x">
+<div class="ugc-base question-body-text">
+<div class=""><p>Write a JQuery program to do the following in a web page: •
+Create three buttons with labels red, green, blue, when the mouse
+is moved over it the background color has to be changed
+respectively. • Create a HTML page holding a list of items and an
+[Extract Text] button is given. Implement the extractText function
+which will be called when the button's onClick event is fired. •
+Create a HTML page holds a list of towns, a search box and a
+[Search] button. Implement the search function to bold the items
+from the list which include the text from the search box.</p>
+</div>
+</div></div></div></div></div></div><h1><p><b>
+<mark>:: Solution ::</mark>
+</b></p></h1><div class="y"><div class="y"><div class="answer-given-body ugc-base">
+<p><span style="text-decoration: underline"><strong>Question
+1:</strong></span></p>
+<p><span style="text-decoration: underline"><strong>HTML file
+:</strong></span></p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang="en"&gt;</p>
+<p>    &lt;head&gt;</p>
+<p>        &lt;!-- title
+for web page --&gt;</p>
+<p>
+        &lt;title&gt;jQuery&lt;/title&gt;</p>
+<p>        &lt;meta
+charset="UTF-8"&gt;</p>
+<p>        &lt;meta
+name="viewport" content="width=device-width,
+initial-scale=1"&gt;</p>
+<p>    &lt;!-- jQuery from CDN --&gt;</p>
+<p>    &lt;script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;</p>
+<p>    &lt;!-- jQuery --&gt;</p>
+<p>    &lt;script&gt;</p>
+<p>
+        $(document).ready(function(){</p>
+<p>
+            //This
+line will handle mousemove event for each button</p>
+<p>
+            $("input[type='button']").mousemove(function()</p>
+<p>
+            {</p>
+<p>
+                //select
+the specified button and change background color</p>
+<p>
+                $(this).css("background-color",$(this).val());</p>
+<p>
+            }</p>
+<p>
+            )</p>
+<p>
+            });</p>
+<p>    &lt;/script&gt;</p>
+<p>    &lt;/head&gt;</p>
+<p>    &lt;body&gt;</p>
+<p>    &lt;input type="button"
+value="RED"/&gt;</p>
+<p>     &lt;input type="button"
+value="GREEN"/&gt;</p>
+<p>     &lt;input type="button"
+value="BLUE"/&gt;</p>
+<p>     &lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>=================================</p>
+<p><strong>Screen 1:</strong></p>
+<p><img alt="RED GREEN BLUE" aria-describedby="joe" src="https://media.cheggcdn.com/coop/b3b/b3bb394e-9f09-4a5b-99fc-935288864c65/1599021305801_image.png" style="height:97px;width:305px;"/></p>
+<p><strong>Screen 2:</strong>Screen when mouse is over the
+specified button</p>
+<p><img alt="RED GREEN BLUE" aria-describedby="jof" src="https://media.cheggcdn.com/coop/358/358bef09-6196-47a7-9470-c63e4040dc1f/1599021352641_image.png" style="height:72px;width:350px;"/></p>
+<p>***************************************************</p>
+<p><span style="text-decoration: underline"><strong>Question
+2:</strong></span></p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<p>&lt;html lang="en"&gt;</p>
+<p>    &lt;head&gt;</p>
+<p>        &lt;!-- title
+for page --&gt;</p>
+<p>
+        &lt;title&gt;HTML
+list&lt;/title&gt;</p>
+<p>        &lt;meta
+charset="UTF-8"&gt;</p>
+<p>        &lt;meta
+name="viewport" content="width=device-width,
+initial-scale=1"&gt;</p>
+<p>    &lt;/head&gt;</p>
+<p>    &lt;body&gt;</p>
+<p>    &lt;ul&gt;</p>
+<p>        &lt;li&gt;List
+Item 1&lt;/li&gt;</p>
+<p>        &lt;li&gt;List
+Item 2&lt;/li&gt;</p>
+<p>        &lt;li&gt;List
+Item 3&lt;/li&gt;</p>
+<p>    &lt;/ul&gt;</p>
+<p>    &lt;!-- button  --&gt;</p>
+<p>    &lt;input type="button" value="Extract
+Text" onclick="extractText()"/&gt;</p>
+<p>    &lt;!-- script is used for javascript
+--&gt;</p>
+<p>    &lt;script&gt;</p>
+<p>        function
+extractText()</p>
+<p>        {</p>
+<p>
+            //take
+the list items and display text</p>
+<p>
+            alert(document.getElementsByTagName("ul")[0].innerText);</p>
+<p>        }</p>
+<p>    &lt;/script&gt;</p>
+<p>    &lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<p>======================================</p>
+<p><strong>Screen 1:</strong></p>
+<p><img alt="List Item 1 List Item 2 • List Item 3 Extract Text" aria-describedby="jog" src="https://media.cheggcdn.com/coop/27f/27fbfb96-2afa-451c-bdb0-cb3c08704ddf/1599021906230_image.png" style="height:130px;width:324px;"/></p>
+<p><strong>Screen 2:</strong>Screen when button is clicked</p>
+</div></div></div><div class="z"><h2><p><b>
+Likes: 0</p><p>Dislikes:  0
+</b></p></h2></div>

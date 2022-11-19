@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function chg(){
+			var h=document.getElementById("h1");
+			var au=document.getElementById("au");
+			var bd=document.getElementById("bd");
+			var dt=document.getElementById("dt").value;
+			var hb="India-China border conflict";
+			var ha="PUBG along with other 117 chinese apps banned in India";
+			var aa="Author: ABC";
+			var ab="Author: DFG";
+			var pa="On September 2, India banned 118 more Chinese apps, including popular video game PUBG, amid escalating tensions along the LAC in eastern Ladakh. Reports also suggest that Indian soldiers have taken up dominating positions at ‘Finger 4’ along the Pangong Lake. The military is also reportedly keeping a close watch on the People’s Liberation Army (PLA)’s build-up at Depsang-DBO.";
+			var pb="The 2020 China–India skirmishes are part of an ongoing military standoff between China and India. Since 5 May 2020, Chinese and Indian troops have engaged in aggressive melee, face-offs and skirmishes at locations along the Sino-Indian border, including near the disputed Pangong Lake in Ladakh and the Tibet Autonomous Region, and near the border between Sikkim and the Tibet Autonomous Region. Additional clashes also took place at locations in eastern Ladakh along the Line of Actual Control (LAC).";
+			var phead={"2020-09-01":hb,"2020-09-02":ha};
+			var auth={"2020-09-01":ab,"2020-09-02":aa};
+			var pagebd={"2020-09-01":pb,"2020-09-02":pa};
+			h.innerHTML=phead[dt];
+			au.innerHTML=auth[dt];
+			bd.innerHTML=pagebd[dt];
+		}
+	</script>
+	<header>
+		<h1 align="center"><div style="margin-left: 55px;"><i>E-News Express</i></div></h1><br><br>
+	</header>
+	<label>Select Date:</label><input type="Date" id="dt" value=""><button onclick="chg()">Go</button><br><br>
+	<h1 id="h1" style="font-size: 30px;"></h1><br>
+	<p id="au" style="font-size: 20px;"></p><br>
+	<p id="bd" style="font-size: 20px;"></p>
+	<p id="ad" align="center">Advertisement: <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXP72_VW_34FR+watch-44-alum-gold-nc-5s_VW_34FR_WF_CO?wid=750&hei=712&trim=1,0&fmt=p-jpg&qlt=80&op_usm=0.5,0.5&.v=1589938213000,1569365645172" style="height: 200px;width: 200px;"></p>
+<style type="text/css">
+	header{
+		font-family: Calibri; 
+		background-color: #fdc;
+		margin-top: 0px;
+		height: 130px;
+		border: 2px solid #f55;
+		margin-bottom: 0px;
+	}
+
+	label{
+		margin-left: 55px;
+		font-family: Calibri;
+		font-size: 20px;
+	}
+	input[type="Date"] {
+    width: 10%;
+    padding: 5px 10px;
+    margin: 20px 40px;
+    font-size: 15px;
+}
+input[type="Date"]:hover {
+	border-color: #aaa;
+	}
+button{
+    cursor: pointer;
+    background: #44c4e7;
+    width: 10%;
+    padding: 5px 10px;
+    border: 0;
+    color: #fff;
+    font-family: "Calibri";
+    font-size: 15px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+    button:hover {
+        background: #369cb8;
+    }
+
+
+</style>
+</body>
+</html>

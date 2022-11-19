@@ -1,0 +1,83 @@
+
+<!doctype html>
+<head><title>Registration Form</title>
+	<style>
+	h1
+		{
+		color:aliceblue;
+		}
+	td
+		{
+			color: #F70206
+		}
+		p{
+			color: slateblue
+		}
+		background {
+  opacity: 0.5;
+}
+	</style>
+</head>
+<body background="ddc42a83310eda903db07aa8e48d9e8c.jpg">
+<img src="1200px-IRCTC_Logo.svg.png" width="195" height="182" alt="IRCTC" align="right" />
+<table align="center" width="70%" border="1">
+  <tr><td height="43" colspan="2" align="center"><h1>Book Agent Ticket</h1></td></tr><tr>
+	<tr><td height="43" colspan="2" align="center"><h2>From IRCTC Authorized Agent</h2></td></tr>
+	<td width="46%">Reservation Quota:</td>
+	<td width="54%">
+		<select name="quota" id="quota" required>
+		<option value="0">-----Enter Reservation Quota-----</option>
+		<option value="GN">General Quota</option>
+		<option value="TQ">Tatkal Quota</option>
+		<option value="LQ">Ladies Quota</option>
+		<option value="LBQ">Lower Berth Quota</option>
+			<option value="PH">Physically Handicapped</option>
+			<option value="HOQ">High Official Quota</option>
+			<option value="PQ">Parliament Quota</option>
+		</select></td></tr>
+	<tr>
+	<td width="46%">Train Name:</td>
+	<td width="54%"><input type="text" name="name" id="name" placeholder="Enter train name" required></td>
+	</tr>
+	<tr>
+	<td width="46%">Train Number:</td>
+	<td width="54%"><p>
+	  <input type="number" name="number" id="tnumber" placeholder="Enter Train Number" required>
+	</p></td>
+	</tr>
+	<tr>
+	<td width="46%">Journey From:</td>
+	<td width="54%"><p>
+	  <input type="text" name="name" id="name" placeholder="Enter departure Destination" required>
+	</p>
+	  <p>Station Code or Full Station Name</p></td>
+	</tr>
+	<tr>
+	<td width="46%">Journey To:</td>
+	<td width="54%"><p>
+	  <input type="text" name="name2" id="name2" placeholder="Enter Arrival Destination" required>
+	</p>
+	  <p>Destination Station Code or Full Station Name </p></td>
+	</tr>
+	<td width="46%">Class:</td>
+	<td width="54%">
+		<select name="quota" id="quota" required>
+		<option value="N">-----Enter Class-----</option>
+		<option value="ACFC">AC First Class</option>
+		<option value="ACTW">AC 2-Tier</option>
+		<option value="ACTH">AC 3-Tier</option>
+		<option value="FC">First Class</option>
+			<option value="ACC">AC Chair Class</option>
+			<option value="S">Sleeper</option>
+			<option value="SS">Second Sitting</option>
+		</select></td></tr>
+<tr><td>Departure/Journey Date:</td>
+	<td><input type="date" id="start" name="trip-start"
+       value="2002-07-21"
+       min="1900-01-01" max="2020-12-31"></td>
+</tr><tr><td align="center" colspan=2><input type="submit" name="submit" id="submit" value="Submit this form" bgcolor="yellow"/><input type="button" bgcolor="orange" value="Reset"/></td></tr>
+</table>
+
+
+</body>
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- title for page -->
+
+        <title>HTML list</title>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    </head>
+
+    <body>
+		<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+    <ul>
+
+        <li>List Item 1</li>
+
+        <li>List Item 2</li>
+
+        <li>List Item 3</li>
+
+    </ul>
+
+    <!-- button  -->
+
+    <input type="button" value="Extract Text" onclick="extractText()"/>
+
+    <!-- script is used for javascript -->
+
+    <script>
+
+        function extractText()
+
+        {
+
+            //take the list items and display text
+
+            alert(document.getElementsByTagName("ul")[0].innerText);
+
+        }
+
+    </script>
+
+    </body>
+
+</html>

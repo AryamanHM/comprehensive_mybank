@@ -1,0 +1,76 @@
+<!doctype html>
+<head><title>Registration Form</title>
+<style>
+	h1
+	{
+		color:darkorange;}
+	h2
+	{
+		color: midnightblue ;}
+	td
+	{
+	color:#000000;</style></head>
+<body background="hackathon-cover-16-9.png">
+<table align="center" width="60%" border="1">
+  <tr><td height="43" colspan="2" align="center"><h1>Registration Form</h1></td></tr><tr>
+	<tr><td height="43" colspan="2" align="center"><h2>Hackathon</h2></td></tr>
+	<tr>
+	<td width="46%">First Name:</td>
+	<td width="54%"><input type="text" name="myname" id="myname" placeholder="Enter FIRST name" required></td>
+	</tr>
+	<tr>
+	<td width="46%">Last Name:</td>
+	<td width="54%"><input type="text" name="myname" id="myname1" placeholder="Enter LAST name" required></td>
+	</tr>
+	<td width="46%">Gender:</td>
+	<td width="54%">
+		<select name="mygender" id="mygender" required>
+		<option value="0">-----Select Your Gender-----</option>
+		<option value="M">Male</option>
+		<option value="F">Female</option></select></td></tr>
+	<td height="60">Your Complete Address:</td>
+	<td><textarea name="completeaddress" id="completeaddress"></textarea></td>
+	
+	<tr><td>Date of Birth:</td>
+	<td><input type="date" id="start" name="trip-start"
+       value="2002-10-13"
+       min="1900-01-01" max="2020-12-31"></td>
+</tr>
+		<tr><td height="33">Age:</td>
+  <td><input type="number" id="myage" name="myage" placeholder="Age"></td></tr>
+	<tr><td height="53">Religion:</td>
+		<td>Hindu:<input type="radio" name="religion" id="religion1" value="H"/>
+			Muslim:<input type="radio" name="religion" id="religion2" value="M"/>
+			Sikh:<input type="radio" name="religion" id="religion3" value="S"/>
+			Christian:<input type="radio" name="religion" id="religion4" value="C"/>
+			Others:<input type="radio" name="religion" id="religion5" value="O"/>
+	</td></tr>
+	<tr><td>Past Experiences:</td>
+		<td><input type="checkbox" id="activity1" name="activity1" value="Workshop">
+  <label for="activity1"> I have attended  Workshops related to hackathons.</label>
+  <br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have participated in recent hackathons</label>
+  <br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+		  <label for="vehicle3"> I am a newcomer</label><br><br></td></tr>
+	<td>Your E-Mail:</td>
+	<td><input type="text" name="myemail" id="myemail" required placeholder="Enter your Mail"></td>
+	
+	</tr>
+<td>Contact:</td>
+	<td><input type="number" name="mycontact" id="mycontact" placeholder="Enter your Contact"></td>
+	
+	</tr>
+<td>Password:</td>
+	<td><input type="password" id="pwd" placeholder="Enter your Password"></td>
+	
+	</tr>
+<td>Re-enter Your Password:</td>
+	<td><input type="password" id="pwd" placeholder="Re-Enter your Password"></td>
+	
+	</tr>
+	<tr><td align="center" colspan=2><input type="submit" name="submit" id="submit" value="Submit this form"/><input type="button" value="Reset"/></td></tr>
+	
+	</table>
+</body>

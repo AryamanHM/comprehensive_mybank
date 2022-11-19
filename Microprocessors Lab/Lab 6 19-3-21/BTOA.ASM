@@ -1,0 +1,14 @@
+ASSUME CS:CODE
+CODE SEGMENT
+    START:MOV SI,5000H
+        MOV AX,[SI]
+        AND AX,000FH
+        MOV CL,4
+        MOV BX,[SI]
+        SHR BL,CL
+        MOV AH,BL
+        MOV BX,3030H
+        OR AX,BX
+        INT 3
+CODE ENDS
+END START

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- title for web page -->
+
+        <title>jQuery</title>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery from CDN -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- jQuery -->
+
+    <script>
+
+        $(document).ready(function(){
+
+            //This line will handle mousemove event for each button
+
+            $("input[type='button']").mousemove(function()
+
+            {
+
+                //select the specified button and change background color
+
+                $(this).css("background-color",$(this).val());
+
+            }
+
+            )
+
+            });
+
+    </script>
+
+    </head>
+
+    <body>
+
+    <input type="button" value="RED"/>
+
+     <input type="button" value="GREEN"/>
+
+     <input type="button" value="BLUE"/>
+
+     </body>
+
+</html>

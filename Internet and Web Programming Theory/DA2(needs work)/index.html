@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" ng-apps="attendanceModule">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<script src="angular.min.js"></script>
+<title>Attendance</title>
+	<style>
+		body
+		{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: yellow;
+			font-family: sans-serif;
+		}
+	table{
+	border-collapse: collapse;
+		}
+	table th,table td{
+	border:1px solid black;
+		padding:10px 20px;}
+		table th
+		{
+			background-color: #1a1b1d;
+			color:white;
+		}
+		table td
+		{
+			background-color: rgb(131,253,131);
+		}
+		.present{
+			background-color:green;
+		}
+		.absent{
+			background-color:red;
+		}
+	</style>
+</head>
+
+<body ng-controller="attendanceTaker">
+	<table>
+	<thead>
+		<h2>Attendance</h2></thead>
+	<tr>
+		<th>Sr.No</th>
+		<th>Name</th>
+		<th>Reg. No.</th>
+		<th>Roll</th>
+		<th>Attendance</th>
+		</tr>
+		<tr ng-repeat="student in students" ng-class="getClass(student.reg)">
+		<td>{{$index+1}}</td>
+			<td>{{student.name}}</td>
+			<td>{{student.reg}}</td>
+			<td>{{student.roll}}</td>
+			<td><select ng-model="student.attendance" ng-click="getId(student.reg)">
+				<option value="p">Present</option>
+				<option value="a">Absent</option>
+				</select></td>
+		</tr>
+	</table>
+	<script src="attendanceModule.js"></script>
+</body>
+</html>

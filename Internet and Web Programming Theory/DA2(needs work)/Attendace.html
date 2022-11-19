@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+		 var counter = 0;
+        $(document).ready(function () {
+            $('#btnGetValue').click(function () {
+                var selValue = $('input[name=$index]:checked').val();
+                counter += parseInt( selValue);
+                $('p').html('<br/>Counter: ' + counter + '');
+            });
+			present=counter;
+			absent=60-counter;
+			pper=(present/60)*100;
+			aper=100-pper;
+        });
+		</script>
+		<style>
+	
+			
+			
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ background-color:#bbb;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;display: block;
+    text-align: left;
+  }
+}
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 220px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}.content {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.content input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 100px;
+    background-color: #eee;
+    border-radius: 10%;
+    background-size:cover;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.content:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: green;
+}.content input:checked ~ .checkmark {
+    background-color: red;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.content:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+     top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 10%;
+    
+}
+.content.checkmark:after {
+     top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 10%;
+    background: white;
+}
+table {
+    width:100%;
+    height:auto;
+    border-style:outset ;
+    opacity:0.9;
+    
+}
+div{
+    opacity:0.9;
+}
+th{
+    background-color:#000;
+    color:#ffffff;
+}
+#sub{
+    background-color:green;
+    box-shadow:5px 5px 19px #000;
+    border-color:green;
+    border-radius:5px;
+    text-transform:capitalize;
+    width:100%;
+    height:auto;
+}#res{
+    background-color:red;
+    box-shadow:5px 5px 19px #000;
+    border-color:red;
+    border-radius:5px;
+    text-transform:capitalize;
+    width:100%;
+    height:auto;
+}
+		</style>
+    </head>
+    <body>
+  </a>
+</div>
+<div style="padding-left:16px">
+  <table rowspan="20px" padding="13px"  border="1px"><div>
+      <tr>
+          <th>
+              ROLL NO
+          </th>
+          <th>
+              PRESENT
+          </th>
+          <th>
+              ABSENT
+          </th>
+      </tr>
+      <tr>
+      <td>1</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="1" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="1" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>2</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="2" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="2" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>3</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="3" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="3" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>4</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="4" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="4" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>5</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="5" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="5" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>6</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="6"value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="6" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>7</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="7" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="7" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>8</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="8">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="8"value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>9</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="9" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="9" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>10</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="10" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="10" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>11</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="11" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="11" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>12</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="12" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="12" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>13</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="13" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="13" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>14</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="14" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="14" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>15</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="15" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="15" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>16</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="16" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="16" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>17</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="17" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="17" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>18</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="18" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="18" value="1">
+  <span class="checkmark"></span>
+</label></td><tr>
+      <td>19</td>
+	  <tr>
+      <td>20</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="19" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="19" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr>
+	  <tr>
+      <td>21</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="20" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="20" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr>
+	  <tr>
+      <td>22</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="21" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="21" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>23</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="22" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="22" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>24</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="23" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="23" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>25</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="24" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="24" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>26</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="25" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="25" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>27</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="26" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="26" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>28</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="28" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="28" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>29</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="29" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="29" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>30</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="30" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="30" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>31</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="31" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="31" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>32</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="32" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="32" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>33</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="33" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="33" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>34</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="34" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="34" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>35</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="35" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="35" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>36</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="36" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="36" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>37</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="37" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="37" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>38</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="38" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="38"value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>39</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="39" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="39" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>40</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="40" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="40" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>41</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="41" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="41" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>42</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="42" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="42" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>43</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="43" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="43" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>44</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="44" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="44" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>45</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="45" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="45" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>46</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="46" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="46" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>47</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="47" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="47" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>48</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="48" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="48" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>49</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="49" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="49" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>50</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="50" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="50" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>51</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="51" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="51" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>52</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="52" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="52" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>53</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="53"value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="53" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>54</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="54" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="54" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>55</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="55" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="55" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>56</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="56" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="56" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>57</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="57" value="1">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="57" value="1">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>58</td>
+          <td>
+              <label class="container" value="1">
+  <input type="radio" name="58">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content" value="1">
+  <input type="radio" name="58">
+  <span class="checkmark"></span>
+</label></td>
+      </tr><tr>
+      <td>59</td>
+          <td>
+              <label class="container" value="1">
+  <input type="radio" name="59">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content" value="1">
+  <input type="radio" name="59">
+  <span class="checkmark"></span>
+</label></td>
+      </tr>
+          <td>
+              <label class="container" value="1">
+  <input type="radio" name="60">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content" value="1">
+  <input type="radio" name="60">
+  <span class="checkmark"></span>
+</label></td>
+      </tr>
+      </tr></div>
+<tr>
+      <td>60</td>
+          <td>
+              <label class="container">
+  <input type="radio" name="16">
+  <span class="checkmark"></span>
+</label>
+          </td>
+          <td><label class="content">
+  <input type="radio" name="16">
+  <span class="checkmark"></span>
+</label></td>
+      </tr>
+  </table><br><center><div id ="button">
+<input type="submit" value="submit" id="sub" ><hr noshade width="1px">
+<input type="reset" id="res"></div></center>
+</form>
+
+Present<p></p><br>
+Absent:<p></p><br>
+Present%:<p></p><br>
+Absent%:<p></p><br>
+    </body>
+</html>

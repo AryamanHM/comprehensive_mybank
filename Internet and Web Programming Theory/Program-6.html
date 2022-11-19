@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head> <title> CSS </title> 
+	<link rel="stylesheet" href="styles.css" >
+	
+	<script>
+		function loadform(n)
+		{
+			if(n=='l')
+			{
+				//alert(n);
+				document.getElementById('login-form').style.visibility="visible";
+				document.getElementById('signup-form').style.visibility="hidden";
+			}
+			if(n=='s')
+			{
+				//alert(n);
+				document.getElementById('signup-form').style.visibility="visible";
+				document.getElementById('login-form').style.visibility="hidden";
+			}
+		}
+	
+	</script>
+	
+	</head>
+	
+	<body>
+	
+	<button class="btn-primary" onclick="loadform('l')"> Login</button> </a> | <a href="javascript:loadform('s')"> Signup </a>
+	
+	<div class="login-sheet" id="login-form" style="visibility:hidden;">
+		This is Login Form
+	</div>
+	
+	<div id="signup-form" style="visibility:hidden;">
+		This if Signup Form
+	
+	 </div>
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

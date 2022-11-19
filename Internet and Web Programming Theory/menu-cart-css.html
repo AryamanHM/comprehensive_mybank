@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+	<head> <title> CSS </title> 
+	<link rel="stylesheet" href="styles.css" >
+	
+	<script>
+	function loadmenu(x)
+	{
+		if(x=='1')
+		{
+			document.getElementById('menu1').style.display="block";
+		}
+		if(x=='2')
+		{
+			document.getElementById('menu2').style.display="block";
+		}
+		if(x=='3')
+		{
+			document.getElementById('menu3').style.display="block";
+		}
+	}
+	
+	function disablemenu(x)
+	{
+		if(x=='1')
+		{
+			document.getElementById('menu1').style.display="none";
+			//document.getElementById('menu2').style.visibility="hidden";
+		}
+		if(x=='2')
+		{
+			document.getElementById('menu2').style.display="none";
+		}
+		if(x=='3')
+		{
+			document.getElementById('menu3').style.display="none";
+		}
+	}
+	function displayCart()
+	{
+		document.getElementById('mycart').style.display="block";
+	}
+	function addToCart()
+	{
+		alert("Product Added Successfully");
+		document.getElementById('mycart').innerHTML+="My Item -1<br>";
+	}
+	</script>
+
+	
+	
+	</head>
+	
+	<body>
+	<br><br>
+	<p align=right>
+	 <div class="cart-icon" > <img src="img/1.png" width=5% onclick="displayCart()"/></div>
+		
+			<div class="my-cart" id="mycart" style="display:none">
+				My Items
+			
+			</div>
+	</p>
+	
+	
+	
+	<br>
+	<table align=center width=80% class="text1">
+	<!----------------------Main Menu-------------------------->
+		<tr> 
+			<td onmouseenter="loadmenu('1');" onmouseleave="disablemenu('1');"> Laptops </td>
+			<td onmousemove="loadmenu('2');" onmouseleave="disablemenu('2');"> Mobiles </td>
+			<td ><a href=""  >Televisions</a>  </td>
+			<td> Men's </td>
+			<td> Women's </td>
+			<td> Home - Furniture </td>
+		
+		
+		</tr>
+		
+		<!----------------------- Sub Menu------------------------>
+		<tr>
+		<td>
+			<div class="menu1" id="menu1" style="display:none">
+			
+				Dell<br>HP <br> Lenova
+			</div>
+		</td>
+		<td>
+			<div class="menu2" id="menu2" style="display:none">
+			
+			
+			</div>
+		</td>
+		<td>
+			<div class="menu3" id="menu3" style="display:none">
+				Onida<br>Sony<br>
+			
+			</div>
+		</td>
+		
+		</tr>
+		
+	</table>
+	
+	
+	<button onclick="addToCart()" value="Add To Cart">Add to Cart </button>
+	
+	
+	
+	
+	</body>
+</html>

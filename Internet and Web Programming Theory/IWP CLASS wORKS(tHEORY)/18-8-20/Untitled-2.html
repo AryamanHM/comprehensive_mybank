@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link rel="stylesheet" href="Untitled-1.css">
+	<script>
+	function loadlogin()
+		{
+	document.getElementById('login-popup').style.visibility="visible";
+			document.getElementById('signup-popup').style.visibility="hidden";
+			
+		}
+	function loadsign()
+		{
+			document.getElementById('signup-popup').style.visibility="visible";
+			document.getElementById('login-popup').style.visibility="hidden";
+		}
+	</script>
+</head>
+
+<body>
+	<br><br><br><br><br>
+	<center>
+	<button class="btn-primary" onClick="loadlogin()">Login</button>  |
+		<button class="btn-primary" onClick="loadsign()">Sign-Up</button>
+	</center>
+	<div class="login-sheet" id="login-popup" style="visibility: hidden">
+	Login Page
+	</div>
+	<div class="signup-sheet" id="signup-popup" style="visibility: hidden">
+	Sign Up
+	</div>
+</body>
+</html>

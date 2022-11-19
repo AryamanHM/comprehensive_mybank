@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head><title>Calculator</title>
+	<script>
+		function getValue(n)
+		{
+			var z;
+			var l,i,pos;
+			document.getElementById("result").value+=n;
+			z= document.getElementById("result").value;
+			l=z.length;
+			if(n=='=')
+			{
+				for(i=0;i<l;i++)
+				{
+					if(z.charAt(i)=='+'||z.charAt(i)=='-'||z.charAt(i)=='*'||z.charAt(i)=='/')
+					{
+						pos=i;
+					}
+				}
+			
+				
+				document.getElementById("op1").value=z.substring(0,pos);
+				document.getElementById("operand").value=z.charAt(pos);
+				document.getElementById("op2").value=z.substring(pos+1,l-1);
+			
+				let x=document.getElementById("operand").value;
+				let w=document.getElementById("op1").value;
+				let w1=Number(w);
+
+				let y=document.getElementById("op2").value;
+				let y1=Number(y);
+
+				if(x=='+')
+				{
+					document.getElementById("result").value=w1+y1;
+				}
+				 if(x=='-')
+				{
+					document.getElementById("result").value=w1-y1;
+				}
+				 if(x=='*')
+				{
+					document.getElementById("result").value=w1*y1;
+				}
+				 if(x=='/')
+				{
+					document.getElementById("result").value=w1/y1;
+				}
+			}
+
+
+		}
+
+	</script>
+	</head>
+
+
+
+	<body style="background-color:#4CA50A">
+		<center><h1>My calculator</h1></center>
+		<br>
+		<br>
+		<br>
+		<center><input type="text" name="op1" id="op1" style="text-align:right;height:50px;width:15%;font-size:30px" />
+		 <input type="text" name="operand" id="operand" style="text-align:right;height:50px;width:15%;font-size:30px"/>
+		 <input type="text" name="op2" id="op2" style="text-align:right;height:50px;width:15%; font-size:30px"/></center>
+		<br>
+
+		<br>
+		<table align=center  height=90% width=10% cellpadding=5px cellspacing=5px>
+
+
+			<tr><td colspan="4" ><input type="text" name="result" id="result" style="text-align:right;width:100%;height:80px;font-size:30px"></td></tr>
+			
+			<tr>
+				<td><input type="button" value="1" style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5"  onclick="javascript:getValue('1')"/></td>
+				 <td><input type="button" value="2" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('2')"/></td>
+
+				 <td><input type="button" value="3" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('3')"/></td>
+				  <td><input type="button" value="+" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('+')"/></td>
+			</tr>
+			 <tr>
+                                <td><input type="button" value="4" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5"onclick="javascript:getValue('4')"/></td>
+                                 <td><input type="button" value="5" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('5')"/></td>
+                                 <td><input type="button" value="6" width=50%  style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5"onclick="javascript:getValue('6')"/></td>
+                                  <td><input type="button" value="-" width=50%  style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5"onclick="javascript:getValue('-')"/></td>
+                        </tr>
+			 <tr>
+                                <td><input type="button" value="7" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('7')"/></td>
+                                 <td><input type="button" value="8" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('8')"/></td>
+                                 <td><input type="button" value="9" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('9')"/></td>
+                                  <td><input type="button" value="*" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('*')"/></td>
+                        </tr>
+			 <tr>
+                                <td><input type="button" value="0" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('0')"/></td>
+                                 <td><input type="button" value="." width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('.')"/></td>
+                                 <td><input type="button" value="/" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('/')"/></td>
+                                  <td><input type="button" value="=" width=50% style="width:60px;height:80px;font-size:20px;background-color:#2AD4B5" onclick="javascript:getValue('=')"/></td>
+                        </tr>
+		</table>
+	</body>
+
+
+
+
+</html>
+

@@ -1,0 +1,27 @@
+.btn-primary
+{
+	background-color: #8989aa;
+	color: white;
+	border-color: #363736;
+	width:70px;
+}
+
+.login-sheet
+{
+	position:absolute;
+	top:250px;
+	left:450px;
+	width:200px;
+	height:200px;
+	background-color:#c5c5c5;
+}
+
+.signup-sheet
+{
+	position:absolute;
+	top:150px;
+	left:700px;
+	width:400px;
+	height:300px;
+	background-color:#c5c5c5;
+}

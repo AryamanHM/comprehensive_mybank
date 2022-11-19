@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript program to  extract the first half of a string of even length.</title>
+	
+</head>
+
+<body>
+	<script>
+	function first_half (str) {
+  if (str.length % 2 == 0) {
+    return str.slice(0, str.length / 2);
+  }
+		else{
+			alert("Enter string of even length.");
+			
+			
+		}
+		return "Try Again.";
+  
+}
+		var x=prompt("Enter a string ");
+document.write(first_half(x));  
+
+	</script>
+</body>
+</html>
